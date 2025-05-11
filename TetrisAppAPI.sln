@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "..\..\..\Downloads\TetrisApp3-master\TetrisApp3-master\ViewModel\ViewModel.csproj", "{AE747157-BB1A-52BA-47FD-9F879B1E9CEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "..\..\..\Downloads\TetrisApp3-master\TetrisApp3-master\Model\Model.csproj", "{2978928D-2DFC-3B6C-FB72-117F6FCFB498}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAPI", "..\..\..\Downloads\TetrisApp3-master\TetrisApp3-master\MyAPI\MyAPI.csproj", "{4DAE0E93-719C-B6D6-1EBD-1CF249F6DB6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyService", "..\..\..\Downloads\TetrisApp3-master\TetrisApp3-master\MyService\MyService.csproj", "{20062B20-6D3B-E1F3-520C-C107A3BF7AF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE747157-BB1A-52BA-47FD-9F879B1E9CEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE747157-BB1A-52BA-47FD-9F879B1E9CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE747157-BB1A-52BA-47FD-9F879B1E9CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE747157-BB1A-52BA-47FD-9F879B1E9CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2978928D-2DFC-3B6C-FB72-117F6FCFB498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2978928D-2DFC-3B6C-FB72-117F6FCFB498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2978928D-2DFC-3B6C-FB72-117F6FCFB498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2978928D-2DFC-3B6C-FB72-117F6FCFB498}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DAE0E93-719C-B6D6-1EBD-1CF249F6DB6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DAE0E93-719C-B6D6-1EBD-1CF249F6DB6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DAE0E93-719C-B6D6-1EBD-1CF249F6DB6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DAE0E93-719C-B6D6-1EBD-1CF249F6DB6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20062B20-6D3B-E1F3-520C-C107A3BF7AF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20062B20-6D3B-E1F3-520C-C107A3BF7AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20062B20-6D3B-E1F3-520C-C107A3BF7AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20062B20-6D3B-E1F3-520C-C107A3BF7AF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EADE7EE9-5FD6-4BB5-813D-8012DC583E2E}
+	EndGlobalSection
+EndGlobal
