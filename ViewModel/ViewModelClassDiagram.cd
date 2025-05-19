@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ViewModel.AdminDb" Collapsed="true">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAkAAACAAAAAAAAAAAAAAAkEAAAAAAAAAAABCAAA=</HashCode>
+      <FileName>AdminDb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViewModel.BaseDb" Collapsed="true">
+    <Position X="9.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAEAAAAAAAAgICAABAAAEAlUAIAAAAAAAQEBSAAA=</HashCode>
+      <FileName>BaseDb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViewModel.ChangeEntity" Collapsed="true">
+    <Position X="15.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAABAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>ChangeEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViewModel.FriendshipDb" Collapsed="true">
+    <Position X="6" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAACAAAAAAAAAAAAAAAkEAIAAAAAAAAABCAAA=</HashCode>
+      <FileName>FriendshipDb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViewModel.LanguageDb" Collapsed="true">
+    <Position X="12.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAACAAAAAAAAAAAAAAAkEAIAAAAAAAAABCAAA=</HashCode>
+      <FileName>LangauageDb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViewModel.PlayerDb" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAkAAACAAAAAAAAAAAAAAAkEAIAAAAAAAAABCAAA=</HashCode>
+      <FileName>PlayerDb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViewModel.UserDb" Collapsed="true">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAACAAAAAAAAAAAAAAAkEAIAAAAAAAAABCAAA=</HashCode>
+      <FileName>UserDb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Delegate Name="ViewModel.CreateSql" Collapsed="true">
+    <Position X="15.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ChangeEntity.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
