@@ -15,10 +15,10 @@ namespace MyService
         public Task<int> UpdateAdmin(Admin x);
         public Task<int> InsertAdmin(Admin x);
 
-        public Task<AdminList> GetAllBrickTypes();
+        public Task<BrickTypeList> GetAllBrickTypes();
         public Task<int> DeleteBrickType(int id);
-        public Task<int> UpdateBrickType(Admin x);
-        public Task<int> InsertBrickType(Admin x);
+        public Task<int> UpdateBrickType(BrickType x);
+        public Task<int> InsertBrickType(BrickType x);
 
         public Task<FriendshipList> GetAllFriendships();
         public Task<int> DeleteFriendship(int id);
