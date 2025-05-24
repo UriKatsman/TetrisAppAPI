@@ -3,7 +3,7 @@
   <Class Name="ViewModel.AdminDb" Collapsed="true">
     <Position X="8.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAkAAACAAAAAAAAAAAAAAAkAAAAAAAAAAAABCAAA=</HashCode>
+      <HashCode>AAAAAkAAACAAAAAAAAAAAAAAAkEAAAAAAAAAAABCAAA=</HashCode>
       <FileName>AdminDb.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -15,21 +15,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ViewModel.ChangeEntity" Collapsed="true">
-    <Position X="13" Y="0.75" Width="1.5" />
+    <Position X="15.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAABAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
       <FileName>ChangeEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ViewModel.FriendshipDb" Collapsed="true">
-    <Position X="5.75" Y="2" Width="1.5" />
+    <Position X="6" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAgAAACAAAAAAAAAAAAAAAkEAIAAAAAAAAABCAAA=</HashCode>
       <FileName>FriendshipDb.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ViewModel.LanguageDb" Collapsed="true">
-    <Position X="11" Y="2" Width="1.5" />
+    <Position X="12.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAgAAACAAAAAAAAAAAAAAAkEAIAAAAAAAAABCAAA=</HashCode>
       <FileName>LangauageDb.cs</FileName>
@@ -49,15 +49,8 @@
       <FileName>UserDb.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ViewModel.BrickTypeDb" Collapsed="true">
-    <Position X="7.5" Y="2" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAgAAACAAAAAAAAAAAAAAAkEAIAAAAAAAAABCAAA=</HashCode>
-      <FileName>BrickTypeDb.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Delegate Name="ViewModel.CreateSql" Collapsed="true">
-    <Position X="13" Y="2" Width="1.5" />
+    <Position X="15.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAIAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ChangeEntity.cs</FileName>

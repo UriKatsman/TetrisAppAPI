@@ -31,9 +31,9 @@ namespace ViewModel
         {
             User usr = entity as User;
             usr.UserName = reader["username"].ToString();
-            usr.Password = reader["password"].ToString();
+            usr.Password = reader["password"].ToString();            
             usr.language = LanguageDb.SelectById(int.Parse(reader["language"].ToString()));
-
+            
             base.CreateModel(entity);
             return usr;
         }
@@ -41,16 +41,16 @@ namespace ViewModel
         {
             return new User();
         }
-
+        
         protected override void CreateDeletedSQL(Base entity, OleDbCommand cmd)
         {
             User u = entity as User;
-            if (u != null)
+            if (u !=null)
             {
                 string sqlStr = $"DELETE FROM userTbl where id=@pid";
 
                 command.CommandText = sqlStr;
-                command.Parameters.Add(new OleDbParameter("@pid", u.Id));
+                command.Parameters.Add(new OleDbParameter("@pid",u.Id));
             }
         }
 
@@ -67,37 +67,43 @@ namespace ViewModel
                 command.Parameters.Add(new OleDbParameter("@password", u.Password));
             }
         }
-
         public override void Delete(Base entity)
         {
-            User u = entity as User;
+            PlayerDb uDB = new PlayerDb();
+            PlayerList uList = uDB.SelectAll();
 
-            AdminDb aDB = new();
-            List<Admin> aLIST = aDB.SelectAll();
-            aLIST = (List<Admin>)aLIST.FindAll(x => x.Id == u.Id);
-            foreach (Admin a in aLIST)
-                aDB.Delete(a);
+            foreach (Player u in uList)
+                if (u.Id == entity.Id)
+                    uDB.Delete(u);
 
-            PlayerDb pDB = new();
-            List<Player> pLIST = pDB.SelectAll();
-            pLIST = (List<Player>)pLIST.FindAll(x => x.Id == u.Id);
-            foreach (Player p in pLIST)
-                pDB.Delete(p);
-
-            if (deleted.Count == 0)
+            Base reqEntity = this.NewEntity();
+            if (entity != null && entity.GetType() == reqEntity.GetType())
             {
-                Base reqEntity = this.NewEntity();
-                if (entity != null && entity.GetType() == reqEntity.GetType())
-                {
-                    deleted.Add(new ChangeEntity(this.CreateDeletedSQL, entity));
-                }
+                deleted.Add(new ChangeEntity(this.CreateDeletedSQL, entity));
+            }
+        }
+        public virtual void Delete(Base entity, bool isFromFamily = false)
+        {
+            if (!isFromFamily) 
+            { 
+            PlayerDb uDB = new PlayerDb();
+            PlayerList uList = uDB.SelectAll();
+
+            foreach (Player u in uList)
+                if (u.Id == entity.Id)
+                    uDB.Delete(u);
+            }
+            Base reqEntity = this.NewEntity();
+            if (entity != null && entity.GetType() == reqEntity.GetType())
+            {
+                deleted.Add(new ChangeEntity(this.CreateDeletedSQL, entity));
             }
         }
 
         protected override void CreateUpdateSQL(Base entity, OleDbCommand cmd)
         {
             User u = entity as User;
-            if (u != null)
+            if (u != null) 
             {
                 string sqlStr = $"Update userTbl SET " +
                                 "[language]=@language,[username]=@username,[password]=@password " +
@@ -105,7 +111,7 @@ namespace ViewModel
 
 
                 command.CommandText = sqlStr;
-                command.Parameters.Add(new OleDbParameter("@language", u.language.Id));
+                command.Parameters.Add(new OleDbParameter("@language",u.language.Id));
                 command.Parameters.Add(new OleDbParameter("@username", u.UserName));
                 command.Parameters.Add(new OleDbParameter("@password", u.Password));
                 command.Parameters.Add(new OleDbParameter("@ID", u.Id));

@@ -17,14 +17,6 @@ namespace MyAPI.Controllers
             return lList;
         }
         [HttpGet]
-        [ActionName("BrickTypeSelector")]
-        public BrickTypeList SelectAllBrickTypes()
-        {
-            BrickTypeDb lDB = new BrickTypeDb();
-            BrickTypeList lList = lDB.SelectAll();
-            return lList;
-        }
-        [HttpGet]
         [ActionName("FriendshipSelector")]
         public FriendshipList SelectAllFriendships()
         {
@@ -62,15 +54,6 @@ namespace MyAPI.Controllers
         {
             Admin a = AdminDb.SelectById(id);
             AdminDb aDb = new AdminDb();
-            aDb.Delete(a);
-            return aDb.SaveChanges().Result;
-        }
-        [HttpDelete("{id}")]
-        [ActionName("DeleteBrickType")]
-        public int DeleteBrickType(int id)
-        {
-            BrickType a = BrickTypeDb.SelectById(id);
-            BrickTypeDb aDb = new BrickTypeDb();
             aDb.Delete(a);
             return aDb.SaveChanges().Result;
         }
@@ -119,14 +102,6 @@ namespace MyAPI.Controllers
             return db.SaveChanges().Result;
         }
         [HttpPost]
-        [ActionName("InsertBrickTYpe")]
-        public int InsertBrickType([FromBody] BrickType x)
-        {
-            BrickTypeDb db = new BrickTypeDb();
-            db.Insert(x);
-            return db.SaveChanges().Result;
-        }
-        [HttpPost]
         [ActionName("InsertFriendship")]
         public int InsertFriendship([FromBody] Friendship x)
         {
@@ -163,14 +138,6 @@ namespace MyAPI.Controllers
         public int UpdateAdmin([FromBody] Admin x)
         {
             AdminDb db = new AdminDb();
-            db.Update(x);
-            return db.SaveChanges().Result;
-        }
-        [HttpPut]
-        [ActionName("UpdateBrickType")]
-        public int UpdateBrickType([FromBody] BrickType x)
-        {
-            BrickTypeDb db = new BrickTypeDb();
             db.Update(x);
             return db.SaveChanges().Result;
         }

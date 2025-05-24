@@ -28,11 +28,11 @@ namespace ViewModel
             return groupList;
         }
         protected override Base CreateModel(Base entity)
-        {
+        {            
             Player plr = entity as Player;
             plr.TetrisHighScore = int.Parse(reader["TetrisHighScore"].ToString());
             plr.TetrisCurrentScore = int.Parse(reader["TetrisCurrentScore"].ToString());
-
+            
             base.CreateModel(entity);
             return plr;
         }
@@ -42,13 +42,13 @@ namespace ViewModel
         }
         protected override void CreateDeletedSQL(Base entity, OleDbCommand cmd)
         {
-            Player p = entity as Player;
-            if (p != null)
+            Player u = entity as Player;
+            if (u != null)
             {
                 string sqlStr = $"DELETE FROM PlayerTbl where id=@pid";
 
                 command.CommandText = sqlStr;
-                command.Parameters.Add(new OleDbParameter("@pid", p.Id));
+                command.Parameters.Add(new OleDbParameter("@pid", u.Id));
             }
         }
 
@@ -77,12 +77,38 @@ namespace ViewModel
         }
 
         public override void Delete(Base entity)
-        {
+        {            
+            UserDb uDB = new UserDb();
+            UserList uList = uDB.SelectAll();
+
+            foreach (User u in uList)
+                if (u.Id == entity.Id)
+                    uDB.Delete(u,true);
+
             Base reqEntity = this.NewEntity();
             if (entity != null && entity.GetType() == reqEntity.GetType())
             {
                 deleted.Add(new ChangeEntity(this.CreateDeletedSQL, entity));
-                deleted.Add(new ChangeEntity(base.CreateDeletedSQL, entity));
+            }
+        }
+
+        public override void Delete(Base entity, bool isFromFamily = false)
+        {            
+            if (!isFromFamily)
+            {
+                UserDb uDB = new UserDb();
+                UserList uList = uDB.SelectAll();
+
+                foreach (User u in uList)
+                    if (u.Id == entity.Id)
+                        uDB.Delete(u,true);
+            }
+
+
+            Base reqEntity = this.NewEntity();
+            if (entity != null && entity.GetType() == reqEntity.GetType())
+            {
+                deleted.Add(new ChangeEntity(this.CreateDeletedSQL, entity));
             }
         }
         protected override void CreateUpdateSQL(Base entity, OleDbCommand cmd)
@@ -96,7 +122,7 @@ namespace ViewModel
 
                 command.CommandText = sqlStr;
                 command.Parameters.Add(new OleDbParameter("@TH", u.TetrisHighScore));
-                command.Parameters.Add(new OleDbParameter("@TC", u.TetrisCurrentScore));
+                command.Parameters.Add(new OleDbParameter("@TC", u.TetrisCurrentScore));              
                 command.Parameters.Add(new OleDbParameter("@ID", u.Id));
             }
         }

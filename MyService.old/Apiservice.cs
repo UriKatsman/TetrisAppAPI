@@ -50,10 +50,6 @@ namespace MyService
         {
             return await client.GetFromJsonAsync<AdminList>(uri + "/api/Values/AdminSelector");
         }
-        public async Task<AdminList> GetAllBrickTypes()
-        {
-            return await client.GetFromJsonAsync<AdminList>(uri + "/api/Values/BrickTypeSelector");
-        }
         public async Task<FriendshipList> GetAllFriendships()
         {
             return await client.GetFromJsonAsync<FriendshipList>(uri + "/api/Values/FriendshipSelector");
@@ -86,10 +82,6 @@ namespace MyService
         {
             return (await client.PostAsJsonAsync<Admin>(uri + "/api/Values/InsertAdmin", x)).IsSuccessStatusCode ? 1 : 0;
         }
-        public async Task<int> InsertBrickType(Admin x)
-        {
-            return (await client.PostAsJsonAsync<Admin>(uri + "/api/Values/InsertBrickTYpe", x)).IsSuccessStatusCode ? 1 : 0;
-        }
 
         public async Task<int> InsertFriendship(Friendship x)
         {
@@ -114,10 +106,6 @@ namespace MyService
         {
             return (await client.PutAsJsonAsync<Admin>(uri + "/api/Values/UpdateAdmin", x)).IsSuccessStatusCode ? 1 : 0;
         }
-        public async Task<int> UpdateBrickType(Admin x)
-        {
-            return (await client.PutAsJsonAsync<Admin>(uri + "/api/Values/UpdateBrickType", x)).IsSuccessStatusCode ? 1 : 0;
-        }
         public async Task<int> UpdateFriendship(Friendship x)
         {
             return (await client.PutAsJsonAsync<Friendship>(uri + "/api/Values/UpdateFriendship", x)).IsSuccessStatusCode ? 1 : 0;
@@ -136,6 +124,6 @@ namespace MyService
         public async Task<int> UpdateUser(User x)
         {
             return (await client.PutAsJsonAsync<User>(uri + "/api/Values/UpdateUser", x)).IsSuccessStatusCode ? 1 : 0;
-        }        
+        }
     }
 }

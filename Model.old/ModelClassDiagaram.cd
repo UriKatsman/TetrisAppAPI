@@ -15,14 +15,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Model.Base">
-    <Position X="7.25" Y="1" Width="1.5" />
+    <Position X="8.5" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Base.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Model.BrickTypeList">
+  <Class Name="Model.BoardComponentsList">
     <Position X="15.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BoardComponentsList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.BrickTypeList">
+    <Position X="17" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BrickTypeList.cs</FileName>
@@ -72,7 +79,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Model.PlayerList">
-    <Position X="15.25" Y="4" Width="1.5" />
+    <Position X="17" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PlayerList.cs</FileName>
@@ -86,17 +93,10 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Model.UserList">
-    <Position X="13.5" Y="4" Width="1.5" />
+    <Position X="15.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UserList.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Model.BrickType" Collapsed="true">
-    <Position X="4.5" Y="2.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAIAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>BrickType.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

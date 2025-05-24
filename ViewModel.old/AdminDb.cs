@@ -22,8 +22,7 @@ namespace ViewModel
         }
         public AdminList SelectAll()
         {
-            command.CommandText = $"SELECT userTbl.*, AdminTbl.AmountBanned FROM " +
-                $"(AdminTbl INNER JOIN userTbl ON AdminTbl.ID = userTbl.ID)";
+            command.CommandText = $"SELECT userTbl.*, AdminTbl.AmountBanned FROM (AdminTbl INNER JOIN userTbl ON AdminTbl.ID = userTbl.ID)";
             AdminList groupList = new AdminList(base.Select());            
             
             return groupList;
@@ -64,11 +63,11 @@ namespace ViewModel
                 inserted.Add(new ChangeEntity(this.CreateInsertSQL, entity));                
             }
         }
-
+        
         public override void Delete(Base entity)
         {
             Base reqEntity = this.NewEntity();
-            if (entity != null && entity.GetType() == reqEntity.GetType())
+            if(entity != null && entity.GetType() == reqEntity.GetType())
             {
                 deleted.Add(new ChangeEntity(this.CreateDeletedSQL, entity));
                 deleted.Add(new ChangeEntity(base.CreateDeletedSQL, entity));
